@@ -353,6 +353,7 @@ footer {
     box-shadow: inset 0px -2px 3px rgba(0, 0, 0, 0.4);
     background-image: url("images/intro_small2.jpg");
     background-size: cover;
+    background-color: #47533c;
     border-bottom: solid 4px #47533c;
 }
 
