@@ -5,134 +5,357 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>My Portfolio</title>
-    <style>
-        /* Basic Styling */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-
-        header {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 1rem;
-        }
-
-        header h1 {
-            margin: 0;
-        }
-
-        nav {
-            margin: 1rem 0;
-            text-align: center;
-        }
-
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #333;
-        }
-
-        section {
-            padding: 20px;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .about, .projects, .contact {
-            background-color: #fff;
-            border-radius: 8px;
-            padding: 20px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        h2 {
-            border-bottom: 2px solid #333;
-            padding-bottom: 5px;
-            margin-bottom: 15px;
-            color: #333;
-        }
-
-        footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #333;
-            color: #fff;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-        }
-
-        .project-item {
-            margin-bottom: 10px;
-        }
-
-        .project-item a {
-            color: #007BFF;
-            text-decoration: none;
-        }
-
-        .project-item a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
 
-    <!-- Header -->
-    <header>
-        <h1>My Portfolio</h1>
-    </header>
+    <!-- Fixed Contact and Navigation Section -->
+    <div class="contact-nav-container">
+        <div class="profile-icons-container">
+            <img src="images/profile_image.jpg" alt="Your Photo" class="profile-image">
+            <div class="left-icons">
+                <ul>
+                    
+                    <li><a href="https://github.com/yourusername" target="_blank" title="GitHub"><i class="fab fa-github"></i></a></li>
+                    <li><a href="mailto:your.email@example.com" title="Email"><i class="fas fa-envelope"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/yourusername" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    
+        <!-- Title text -->
+        <span class="title-text highlight">Firstname Lastname</span>
+    
+        <div class="contact-nav-content">
+            <div class="navi-links">
+                <nav>
+                    <a href="#about">About Me</a>
+                    <a href="#work-projects">Work Projects</a>
+                    <a href="#training-projects">Training Projects</a>
+                    <a href="#private-projects">Private Projects</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+    
 
-    <!-- Navigation -->
-    <nav>
-        <a href="#about">About Me</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </nav>
-
-    <!-- About Section -->
-    <section class="about" id="about">
-        <h2>About Me</h2>
-        <p>Hello! I'm [Your Name], a [Your Profession] with a passion for coding and building things. I specialize in [Your Skills/Technologies]. Welcome to my portfolio where I showcase my recent projects and contributions!</p>
-    </section>
-
-    <!-- Projects Section -->
-    <section class="projects" id="projects">
-        <h2>Projects</h2>
-        <div class="project-item">
-            <h3>Project 1</h3>
-            <p>A short description of your project. This could be a Python application, a Docker project, or anything else.</p>
-            <a href="https://github.com/yourusername/project1" target="_blank">View on GitHub</a>
+    <!-- Main Content Area -->
+    <div class="content">
+        <div class="image-container"></div>
+        <!-- About Me Section -->
+        <div class="section about" id="about">
+            <div class="text-content">
+                <h2 class="section-header">Hi there!</h2>
+                <div class="intro-text">
+                <p>I'm [Your Name], a 
+                    <span class="highlight">system engineer</span> 
+                    and 
+                    <span class="highlight">data scientist</span>
+                     with a passion for positive change. 
+                    I specialize in integrating diverse technologies, including backend development, standalone software, 
+                    machine learning, and frontend solutions. I am committed to delivering innovative and eco-friendly solutions, 
+                    leveraging my strengths in 
+                    <span class="highlight">problem-solving</span>
+                     and 
+                    <span class="highlight">efficiency</span>.</p>
+            </div>
+        </div>
         </div>
 
-        <div class="project-item">
-            <h3>Project 2</h3>
-            <p>Another project description. Feel free to add more details or a live demo link.</p>
-            <a href="https://github.com/yourusername/project2" target="_blank">View on GitHub</a>
+        <!-- Work Projects Section -->
+        <div class="section job-projects" id="work-projects">
+            <div class="text-content">
+                <div class="header-container">
+                    <h2 class="section-header">Work Projects</h2>
+                    
+                        <div class="chart-container">
+                            <canvas class="projectHistogram"></canvas>
+                        </div>
+                    
+                    <div class="filter-container">
+                        
+                        <div class="filter-icons">
+                            <i class="fab fa-python filter-icon" data-filter="python" title="Python"></i>
+                            <i class="fas fa-database filter-icon" data-filter="database" title="Database"></i>
+                            <i class="fab fa-js-square filter-icon" data-filter="javascript" title="JavaScript"></i>
+                            <i class="fab fa-html5 filter-icon" data-filter="html" title="HTML"></i>
+                            <i class="fab fa-css3-alt filter-icon" data-filter="css" title="CSS"></i>
+                            <i class="fab fa-bootstrap filter-icon" data-filter="bootstrap" title="Bootstrap"></i>
+                            <img class="filter-icon" src="images/icons/django.svg" data-filter="django" title="Django">
+                            <i class="fab fa-aws filter-icon" data-filter="aws" title="AWS"></i>
+                            <img class="filter-icon" src="images/icons/vba.png" data-filter="vba" title="VBA">
+                            <img class="filter-icon" src="images/icons/Google_Apps_Script.svg" data-filter="google-apps-script" title="Google Apps Script">
+                            <img class="filter-icon" src="images/icons/google-cloud.svg" data-filter="google-cloud-platform" title="Google Cloud Platform">
+                            <img class="filter-icon" src="images/icons/arcgis.png" data-filter="arcgis" title="ArcGIS">
+                            <img class="filter-icon" src="images/icons/csharp.png" data-filter="csharp" title="C#">
+                            <img class="filter-icon" src="images/icons/cpp.svg" data-filter="cplusplus" title="C++">                        
+                        </div>
+                        <i class="fas fa-filter filter-toggle" title="Filter"></i> <!-- Toggle Button -->
+                    </div>
+                    
+                </div>
+                <!-- Project Cards Container -->
+                <div class="project-cards-container">
+                    <!-- Work Project Cards -->
+                    <div class="project-card" data-tags="html css javascript bootstrap django aws">
+                        <div class="card-header">
+                            <h3>E-learning Platform</h3>
+                            <div class="tech-icons">
+                                <i class="fab fa-html5" title="HTML"></i>
+                                <i class="fab fa-css3-alt" title="CSS"></i>
+                                <i class="fab fa-js-square" title="jQuery"></i>
+                                <i class="fab fa-bootstrap" title="Bootstrap"></i>
+                                <img class="img-icon" src="images/icons/django.svg" title="Django">
+                                <i class="fab fa-aws" title="Amazon EC2"></i>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="project-description">Developed an internal education management platform to facilitate part-time work integration within a company. The platform streamlined educational processes and provided an interface for managing educational content.</p>
+                        </div>
+                        <div class="card-footer">
+                            <strong>Code: </strong>Confidential
+                            <span class="project-label">Web Application</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card" data-tags="html css javascript bootstrap django aws">
+                        <div class="card-header">
+                            <h3>Survey Management System</h3>
+                            <div class="tech-icons">
+                                <i class="fab fa-html5" title="HTML"></i>
+                                <i class="fab fa-css3-alt" title="CSS"></i>
+                                <i class="fab fa-js-square" title="jQuery"></i>
+                                <i class="fab fa-bootstrap" title="Bootstrap"></i>
+                                <img class="img-icon" src="images/icons/django.svg" title="Django">
+                                <i class="fab fa-aws" title="Amazon EC2"></i>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="project-description">Created a user-friendly survey management system designed to streamline survey processes and enhance administrative features. This project aimed at improving the efficiency of survey data collection and management.</p>
+                        </div>
+                        <div class="card-footer">
+                            <strong>Code: </strong>Confidential
+                            <span class="project-label">Web Application</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card" data-tags="vba">
+                        <div class="card-header">
+                            <h3>Flower Card Creation</h3>
+                            <div class="tech-icons">
+                                
+                                <img class="img-icon" src="images/icons/vba.png" title="VBA">
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="project-description">Automated the creation of flower cards by formatting data into predefined layouts. This automation significantly reduced manual effort and increased efficiency.</p>
+                        </div>
+                        <div class="card-footer">
+                            <strong>Code: </strong>Confidential
+                            <span class="project-label">Desktop Application</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card" data-tags="google-apps-script">
+                        <div class="card-header">
+                            <h3>Permit Management System</h3>
+                            <div class="tech-icons">
+                                <img class="img-icon" src="images/icons/Google_Apps_Script.svg" title="Google Apps Script">
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="project-description">Developed an online automation system using Google Apps Script, Google Sheets, and Google Forms to streamline permit applications and surveys across company branches and departments. The system automatically notifies the responsible leader via email to review and sign documents.</p>
+                        </div>
+                        <div class="card-footer">
+                            <strong>Code: </strong>Confidential
+                            <span class="project-label">Web Application</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card" data-tags="java csharp cplusplus">
+                        <div class="card-header">
+                            <h3>Governmental System Update</h3>
+                            <div class="tech-icons">
+                                <i class="fab fa-java" title="Java"></i>
+                                <img class="img-icon" src="images/icons/cpp.svg" title="C++">
+                                <img class="img-icon" src="images/icons/csharp.png" title="C#">
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="project-description">Added new features to a governmental vehicle license plate system by implementing predefined features to improve functionality and efficiency.</p>
+                        </div>
+                        <div class="card-footer">
+                            <strong>Code: </strong>Confidential
+                            <span class="project-label">Desktop Application</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card" data-tags="google-cloud-platform vba">
+                        <div class="card-header">
+                            <h3>Geolocation Retrieval Tool</h3>
+                            <div class="tech-icons">
+                                <img class="img-icon" src="images/icons/vba.png" title="VBA">
+                                <img class="img-icon" src="images/icons/google-cloud.svg" title="Google Cloud Platform">
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="project-description">Created a software tool that automatically retrieves the geolocation of addresses using the Google Maps Geocoding API. Integrated into Excel, this tool allows users to quickly obtain geographic coordinates for multiple addresses.</p>
+                        </div>
+                        <div class="card-footer">
+                            <strong>Code: </strong>Confidential
+                            <span class="project-label">Desktop Application</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-tags="python arcgis">
+                        <div class="card-header">
+                            <h3>ArcGIS Automation</h3>
+                            <div class="tech-icons">
+                                <i class="fab fa-python" title="Python"></i>
+                                <img class="img-icon" src="images/icons/arcgis.png" title="ArcGIS">
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="project-description">Automated ArcGIS routines that could be exceuted through a batch file.</div>
+                        <div class="card-footer">
+                            <strong>Code: </strong>Confidential
+                            <span class="project-label">Executable</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                    
         </div>
-    </section>
 
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <h2>Contact</h2>
-        <p>If you'd like to reach out, feel free to contact me through the following platforms:</p>
-        <ul>
-            <li>Email: your.email@example.com</li>
-            <li>LinkedIn: <a href="https://www.linkedin.com/in/yourusername" target="_blank">yourusername</a></li>
-            <li>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></li>
-        </ul>
-    </section>
+        <!-- Training Projects Section -->
+        <div class="section training-projects" id="training-projects">
+            <div class="text-content">
+                <div class="header-container">
+                    <h2 class="section-header">Training Projects</h2>
+                    <div class="chart-container">
+                        <canvas class="projectHistogram"></canvas>
+                    </div>
+                    <div class="filter-container">
+                        
+                        <div class="filter-icons">
+                            <i class="fab fa-python filter-icon" data-filter="python" title="Python"></i>
+                        </div>
+                        <i class="fas fa-filter filter-toggle" title="Filter"></i> <!-- Toggle Button -->
+                    </div>
+                </div>
+                <!-- Project Cards Container -->
+                <div class="project-cards-container">
+                    <!-- Training Project Cards -->
+                    
+                    <div class="project-card" data-tags="python">
+                        <div class="card-header">
+                            <h3>CO2 Emission Prediction</h3>
+                            <div class="tech-icons">
+                                <i class="fab fa-python" title="Python"></i>
+                                <img class="img-icon" src="images/icons/scikit-learn.svg" title="Scikit-Learn">
+                                <img class="img-icon" src="images/icons/keras.png" title="Keras">
 
-    <!-- Footer -->
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="project-description">
+                                Developed a machine learning model to predict CO2 emissions from vehicles. 
+                                This project aimed at contributing to environmental sustainability by providing 
+                                accurate emission forecasts. The project was summarized in a Streamlit web page.
+                            </p>
+                            <p class="project-description">
+                                <strong>Regression Models:</strong>
+                                <ul>
+                                    <li>Linear Regression</li>
+                                    <li>Decision Tree</li>
+                                    <li>XGBoost</li>
+                                    <li>Neural Networks</li>
+                                </ul>
+                                <strong>Classification Models:</strong>
+                                <ul>
+                                    <li>Logistic Regression</li>
+                                    <li>K-Nearest Neighbours</li>
+                                    <li>Decision Tree</li>
+                                    <li>XGBoost</li>
+                                    <li>Neural Networks</li>
+                                </ul>
+                            </p>
+                            
+                        </div>
+                        <div class="card-footer">
+                            <strong>Code: </strong>
+                            <div class="card-icons">
+                                <img class="code-icon" src="images/icons/colab.svg" title="Colab">
+                            </div>
+                            <span class="project-label">Machine Learning</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Private Projects Section -->
+        <div class="section private-projects" id="private-projects">
+            <div class="text-content">
+                <div class="header-container">
+                    <h2 class="section-header">Private Projects</h2>
+                    <div class="chart-container">
+                        <canvas class="projectHistogram"></canvas>
+                    </div>
+                    <div class="filter-container">
+                        
+                        <div class="filter-icons">
+                            <i class="fab fa-python filter-icon" data-filter="python" title="Python"></i>
+                            <i class="fas fa-database filter-icon" data-filter="database" title="Database"></i>
+                            <i class="fa-solid fa-square filter-icon" data-filter="javascript" title="JavaScript"></i>
+                            <i class="fas fa-cogs filter-icon" data-filter="excel-vba" title="Excel VBA"></i>
+                            <i class="fas fa-leaf filter-icon" data-filter="automation" title="Automation"></i>
+                            <i class="fab fa-html5 filter-icon" data-filter="html" title="HTML"></i>
+                            <i class="fab fa-css3-alt filter-icon" data-filter="css" title="CSS"></i>
+                            <i class="fab fa-bootstrap filter-icon" data-filter="bootstrap" title="Bootstrap"></i>
+                            <i class="fab fa-django filter-icon" data-filter="django" title="Django"></i>
+                            <i class="fab fa-aws filter-icon" data-filter="aws" title="AWS"></i>
+                        </div>
+                        <i class="fas fa-filter filter-toggle" title="Filter"></i> <!-- Toggle Button -->
+                    </div>
+                </div>
+                <!-- Project Cards Container -->
+                <div class="project-cards-container">
+                    <!-- Private Project Cards -->
+                    <div class="project-card" data-tags="python docker">
+                        <span class="project-label">Private Project</span>
+                        <div class="card-header">
+                            <h3>Python and Docker Application</h3>
+                            <div class="tech-icons">
+                                <i class="fab fa-python" title="Python"></i>
+                                <i class="fab fa-docker" title="Docker"></i>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="project-description">A Python application deployed in Docker containers.</p>
+                            <div class="code-icons">
+                                <a href="https://github.com/yourusername/project1" target="_blank" title="GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://colab.research.google.com/" target="_blank" title="Colab">
+                                    <i class="fas fa-laptop-code"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Small Footer -->
     <footer>
-        <p>&copy; 2024 [Your Name]. All rights reserved.</p>
+        <p>&copy; 2024 [Your Name]</p>
     </footer>
 
+    <script src="main.js"></script>
 </body>
 </html>
-
