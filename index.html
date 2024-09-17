@@ -4,71 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>My Portfolio</title>
+    <title>Roberta Huebner - Portfolio</title>
+    <link rel="preload" href="base.css" as="style">
     <link rel="stylesheet" href="base.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="main.js"></script>
 </head>
 <body>
-
-    <!-- Fixed Contact and Navigation Section -->
-    <div class="contact-nav-container">
+    <button class="nav-icon-button" onclick="toggleNav()">☰</button>
+            <!-- Navigation Content -->
+            <div class="contact-nav-content">
+                <div class="navi-links">
+                    <nav>
+                        <a href="#about">About Me</a>
+                        <a href="#work-projects">Work Projects</a>
+                        <a href="#training-projects">Training Projects</a>
+                        <a href="#private-projects">Private Projects</a>
+                    </nav>
+                </div>
+            </div>
+    <!-- Main Content Area -->
+    <div class="content">
+        <div class="image-container"></div>
+        <!-- Profile and Navigation Sections -->
         <div class="profile-icons-container">
-            <img src="images/profile_image.jpg" alt="Your Photo" class="profile-image">
-            <div class="left-icons">
+            <img src="images/profile_image.webp" alt="Your Photo" class="profile-image">
+            <div class="profile-icons">
                 <ul>
-                    
                     <li><a href="https://github.com/yourusername" target="_blank" title="GitHub"><i class="fab fa-github"></i></a></li>
                     <li><a href="mailto:your.email@example.com" title="Email"><i class="fas fa-envelope"></i></a></li>
                     <li><a href="https://www.linkedin.com/in/yourusername" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
                 </ul>
             </div>
+            <span class="title-text highlight">Firstname Lastname</span>
         </div>
-    
-        <!-- Title text -->
-        <span class="title-text highlight">Firstname Lastname</span>
-    
-        <div class="contact-nav-content">
-            <div class="navi-links">
-                <nav>
-                    <a href="#about">About Me</a>
-                    <a href="#work-projects">Work Projects</a>
-                    <a href="#training-projects">Training Projects</a>
-                    <a href="#private-projects">Private Projects</a>
-                </nav>
-            </div>
-        </div>
-    </div>
-    
+        
 
-    <!-- Main Content Area -->
-    <div class="content">
-        <div class="image-container"></div>
+        
         <!-- About Me Section -->
-        <div class="section about" id="about">
-            <div class="text-content">
+        <div class="section" id="about">
+            <div class="intro">
                 <h2 class="section-header">Hi there!</h2>
                 <div class="intro-text">
-                <p>I'm [Your Name], a 
-                    <span class="highlight">system engineer</span> 
-                    and 
-                    <span class="highlight">data scientist</span>
-                     with a passion for positive change. 
-                    I specialize in integrating diverse technologies, including backend development, standalone software, 
-                    machine learning, and frontend solutions. I am committed to delivering innovative and eco-friendly solutions, 
-                    leveraging my strengths in 
-                    <span class="highlight">problem-solving</span>
-                     and 
-                    <span class="highlight">efficiency</span>.</p>
+                    <p>I'm a 
+                        <span class="highlight">system engineer</span> 
+                        and 
+                        <span class="highlight">data scientist</span>
+                        with a passion for positive change. 
+                        I specialize in integrating diverse technologies, including backend development, standalone software, 
+                        machine learning, and frontend solutions. I am committed to delivering innovative and eco-friendly solutions, 
+                        leveraging my strengths in 
+                        <span class="highlight">problem-solving</span>
+                        and 
+                        <span class="highlight">efficiency</span>.
+                    </p>
+                </div>
             </div>
-        </div>
         </div>
 
         <!-- Work Projects Section -->
-        <div class="section job-projects" id="work-projects">
-            <div class="text-content">
+        <div class="section" id="work-projects">
                 <div class="header-container">
                     <h2 class="section-header">Work Projects</h2>
                     
@@ -85,14 +83,14 @@
                             <i class="fab fa-html5 filter-icon" data-filter="html" title="HTML"></i>
                             <i class="fab fa-css3-alt filter-icon" data-filter="css" title="CSS"></i>
                             <i class="fab fa-bootstrap filter-icon" data-filter="bootstrap" title="Bootstrap"></i>
-                            <img class="filter-icon" src="images/icons/django.svg" data-filter="django" title="Django">
+                            <img class="filter-icon" src="images/icons/django.svg" data-filter="django" title="Django" loading="lazy">
                             <i class="fab fa-aws filter-icon" data-filter="aws" title="AWS"></i>
-                            <img class="filter-icon" src="images/icons/vba.png" data-filter="vba" title="VBA">
-                            <img class="filter-icon" src="images/icons/Google_Apps_Script.svg" data-filter="google-apps-script" title="Google Apps Script">
-                            <img class="filter-icon" src="images/icons/google-cloud.svg" data-filter="google-cloud-platform" title="Google Cloud Platform">
-                            <img class="filter-icon" src="images/icons/arcgis.png" data-filter="arcgis" title="ArcGIS">
-                            <img class="filter-icon" src="images/icons/csharp.png" data-filter="csharp" title="C#">
-                            <img class="filter-icon" src="images/icons/cpp.svg" data-filter="cplusplus" title="C++">                        
+                            <img class="filter-icon" src="images/icons/vba.webp" data-filter="vba" title="VBA" loading="lazy">
+                            <img class="filter-icon" src="images/icons/Google_Apps_Script.svg" data-filter="google-apps-script" title="Google Apps Script" loading="lazy">
+                            <img class="filter-icon" src="images/icons/google-cloud.svg" data-filter="google-cloud-platform" title="Google Cloud Platform" loading="lazy">
+                            <img class="filter-icon" src="images/icons/arcgis.webp" data-filter="arcgis" title="ArcGIS" loading="lazy">
+                            <img class="filter-icon" src="images/icons/csharp.webp" data-filter="csharp" title="C#" loading="lazy">
+                            <img class="filter-icon" src="images/icons/cpp.svg" data-filter="cplusplus" title="C++" loading="lazy">                        
                         </div>
                         <i class="fas fa-filter filter-toggle" title="Filter"></i> <!-- Toggle Button -->
                     </div>
@@ -109,7 +107,7 @@
                                 <i class="fab fa-css3-alt" title="CSS"></i>
                                 <i class="fab fa-js-square" title="jQuery"></i>
                                 <i class="fab fa-bootstrap" title="Bootstrap"></i>
-                                <img class="img-icon" src="images/icons/django.svg" title="Django">
+                                <img class="img-icon" src="images/icons/django.svg" title="Django" loading="lazy">
                                 <i class="fab fa-aws" title="Amazon EC2"></i>
                             </div>
                         </div>
@@ -130,7 +128,7 @@
                                 <i class="fab fa-css3-alt" title="CSS"></i>
                                 <i class="fab fa-js-square" title="jQuery"></i>
                                 <i class="fab fa-bootstrap" title="Bootstrap"></i>
-                                <img class="img-icon" src="images/icons/django.svg" title="Django">
+                                <img class="img-icon" src="images/icons/django.svg" title="Django" loading="lazy">
                                 <i class="fab fa-aws" title="Amazon EC2"></i>
                             </div>
                         </div>
@@ -148,7 +146,7 @@
                             <h3>Flower Card Creation</h3>
                             <div class="tech-icons">
                                 
-                                <img class="img-icon" src="images/icons/vba.png" title="VBA">
+                                <img class="img-icon" src="images/icons/vba.webp" title="VBA" loading="lazy">
                             </div>
                         </div>
                         <div class="card-body">
@@ -164,7 +162,7 @@
                         <div class="card-header">
                             <h3>Permit Management System</h3>
                             <div class="tech-icons">
-                                <img class="img-icon" src="images/icons/Google_Apps_Script.svg" title="Google Apps Script">
+                                <img class="img-icon" src="images/icons/Google_Apps_Script.svg" title="Google Apps Script" loading="lazy">
                             </div>
                         </div>
                         <div class="card-body">
@@ -181,8 +179,8 @@
                             <h3>Governmental System Update</h3>
                             <div class="tech-icons">
                                 <i class="fab fa-java" title="Java"></i>
-                                <img class="img-icon" src="images/icons/cpp.svg" title="C++">
-                                <img class="img-icon" src="images/icons/csharp.png" title="C#">
+                                <img class="img-icon" src="images/icons/cpp.svg" title="C++" loading="lazy">
+                                <img class="img-icon" src="images/icons/csharp.webp" title="C#" loading="lazy">
                             </div>
                         </div>
                         <div class="card-body">
@@ -198,8 +196,8 @@
                         <div class="card-header">
                             <h3>Geolocation Retrieval Tool</h3>
                             <div class="tech-icons">
-                                <img class="img-icon" src="images/icons/vba.png" title="VBA">
-                                <img class="img-icon" src="images/icons/google-cloud.svg" title="Google Cloud Platform">
+                                <img class="img-icon" src="images/icons/vba.webp" title="VBA" loading="lazy">
+                                <img class="img-icon" src="images/icons/google-cloud.svg" title="Google Cloud Platform" loading="lazy">
                             </div>
                         </div>
                         <div class="card-body">
@@ -216,7 +214,7 @@
                             <h3>ArcGIS Automation</h3>
                             <div class="tech-icons">
                                 <i class="fab fa-python" title="Python"></i>
-                                <img class="img-icon" src="images/icons/arcgis.png" title="ArcGIS">
+                                <img class="img-icon" src="images/icons/arcgis.webp" title="ArcGIS" loading="lazy">
                             </div>
                         </div>
                         <div class="card-body">
@@ -227,13 +225,11 @@
                         </div>
                     </div>
                 </div>
-            </div>
                     
         </div>
 
         <!-- Training Projects Section -->
-        <div class="section training-projects" id="training-projects">
-            <div class="text-content">
+        <div class="section" id="training-projects">
                 <div class="header-container">
                     <h2 class="section-header">Training Projects</h2>
                     <div class="chart-container">
@@ -256,8 +252,9 @@
                             <h3>CO2 Emission Prediction</h3>
                             <div class="tech-icons">
                                 <i class="fab fa-python" title="Python"></i>
-                                <img class="img-icon" src="images/icons/scikit-learn.svg" title="Scikit-Learn">
-                                <img class="img-icon" src="images/icons/keras.png" title="Keras">
+                                <img class="img-icon-svg" src="images/icons/pandas.svg" title="Pandas" loading="lazy">
+                                <img class="img-icon" src="images/icons/scikit-learn.svg" title="Scikit-Learn" loading="lazy">
+                                <img class="img-icon" src="images/icons/keras.webp" title="Keras" loading="lazy">
 
                             </div>
                         </div>
@@ -267,40 +264,66 @@
                                 This project aimed at contributing to environmental sustainability by providing 
                                 accurate emission forecasts. The project was summarized in a Streamlit web page.
                             </p>
-                            <p class="project-description">
-                                <strong>Regression Models:</strong>
-                                <ul>
-                                    <li>Linear Regression</li>
-                                    <li>Decision Tree</li>
-                                    <li>XGBoost</li>
-                                    <li>Neural Networks</li>
-                                </ul>
-                                <strong>Classification Models:</strong>
-                                <ul>
-                                    <li>Logistic Regression</li>
-                                    <li>K-Nearest Neighbours</li>
-                                    <li>Decision Tree</li>
-                                    <li>XGBoost</li>
-                                    <li>Neural Networks</li>
-                                </ul>
-                            </p>
-                            
+                                <div class="model-lists">
+                                    <div>
+                                        <strong>Regression Models:</strong>
+                                        <ul>
+                                            <li>Linear Regression</li>
+                                            <li>Elastic Net</li>
+                                            <li>Decision Tree</li>
+                                            <li>XGBoost</li>
+                                            <li>Neural Networks</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <strong>Classification Models:</strong>
+                                        <ul>
+                                            <li>Logistic Regression</li>
+                                            <li>K-Nearest Neighbours</li>
+                                            <li>Decision Tree</li>
+                                            <li>XGBoost</li>
+                                            <li>Neural Networks</li>
+                                        </ul>
+                                    </div>
+                                </div>
                         </div>
                         <div class="card-footer">
                             <strong>Code: </strong>
-                            <div class="card-icons">
-                                <img class="code-icon" src="images/icons/colab.svg" title="Colab">
+                            <a href="https://colab.research.google.com/drive/14HHaMYKtIs1bK-lIfX2Vtkr-z8_qGduV#scrollTo=otgV6oQpkKZ-" target="_blank" title="Colab">
+                                <img class="code-icon" src="images/icons/colab.webp" title="Colab">
+                            </a>
+                            <a href="https://github.com/r-huebner/co2-emission-prediction" target="_blank" title="GitHub">
+                                <i class="fab fa-github code-icon" title="GitHub"></i>
+                            </a>
+                            <span class="project-label">Data Science</span>
+                        </div>
+                    </div>
+                    <div class="project-card" data-tags="python">
+                        <div class="card-header">
+                            <h3>Docker Testing</h3>
+                            <div class="tech-icons">
+                                <i class="fab fa-python" title="Python"></i>
+                                <i class="fab fa-docker" title="Docker"></i>
                             </div>
-                            <span class="project-label">Machine Learning</span>
+                        </div>
+                        <div class="card-body">
+                            <p class="project-description">
+                                Developed a machine learning model to predict CO2 emissions from vehicles. 
+                                This project aimed at contributing to environmental sustainability by providing 
+                                accurate emission forecasts. The project was summarized in a Streamlit web page.
+                            </p>                     
+                        </div>
+                        <div class="card-footer">
+                            <strong>Code: </strong>
+                            In Progress
+                            <span class="project-label">Data Science</span>
                         </div>
                     </div>
                 </div>
-            </div>
         </div>
 
         <!-- Private Projects Section -->
-        <div class="section private-projects" id="private-projects">
-            <div class="text-content">
+        <div class="section" id="private-projects">
                 <div class="header-container">
                     <h2 class="section-header">Private Projects</h2>
                     <div class="chart-container">
@@ -310,15 +333,6 @@
                         
                         <div class="filter-icons">
                             <i class="fab fa-python filter-icon" data-filter="python" title="Python"></i>
-                            <i class="fas fa-database filter-icon" data-filter="database" title="Database"></i>
-                            <i class="fa-solid fa-square filter-icon" data-filter="javascript" title="JavaScript"></i>
-                            <i class="fas fa-cogs filter-icon" data-filter="excel-vba" title="Excel VBA"></i>
-                            <i class="fas fa-leaf filter-icon" data-filter="automation" title="Automation"></i>
-                            <i class="fab fa-html5 filter-icon" data-filter="html" title="HTML"></i>
-                            <i class="fab fa-css3-alt filter-icon" data-filter="css" title="CSS"></i>
-                            <i class="fab fa-bootstrap filter-icon" data-filter="bootstrap" title="Bootstrap"></i>
-                            <i class="fab fa-django filter-icon" data-filter="django" title="Django"></i>
-                            <i class="fab fa-aws filter-icon" data-filter="aws" title="AWS"></i>
                         </div>
                         <i class="fas fa-filter filter-toggle" title="Filter"></i> <!-- Toggle Button -->
                     </div>
@@ -327,28 +341,31 @@
                 <div class="project-cards-container">
                     <!-- Private Project Cards -->
                     <div class="project-card" data-tags="python docker">
-                        <span class="project-label">Private Project</span>
                         <div class="card-header">
-                            <h3>Python and Docker Application</h3>
+                            <h3>Ancestry Data Preparation</h3>
                             <div class="tech-icons">
                                 <i class="fab fa-python" title="Python"></i>
-                                <i class="fab fa-docker" title="Docker"></i>
+                                <img class="img-icon-svg" src="images/icons/pandas.svg" title="Pandas" loading="lazy">
                             </div>
                         </div>
                         <div class="card-body">
-                            <p class="project-description">A Python application deployed in Docker containers.</p>
+                            <p class="project-description">This project focuses on extracting, cleaning, and organizing ancestry data from a website.
+                                 The data often contains misspellings and variations in names, making it difficult to process and analyze. 
+                                 By using data science techniques, I aim to resolve these issues and create a clean dataset for better analysis.
+                                This is a project in progress.</p>
                             <div class="code-icons">
-                                <a href="https://github.com/yourusername/project1" target="_blank" title="GitHub">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                                <a href="https://colab.research.google.com/" target="_blank" title="Colab">
-                                    <i class="fas fa-laptop-code"></i>
-                                </a>
+                                
                             </div>
+                        </div>
+                        <div class="card-footer">
+                            <strong>Code: </strong>
+                            <a href="https://colab.research.google.com/drive/1tV-Rn1BiXV4YDRMNX6RCo8lPpOqIxzwJ" target="_blank" title="Colab">
+                                <img class="code-icon" src="images/icons/colab.webp" title="Colab">
+                            </a>
+                            <span class="project-label">Data Science</span>
                         </div>
                     </div>
                 </div>
-            </div>
         </div>
     </div>
     <!-- Small Footer -->
@@ -356,6 +373,6 @@
         <p>&copy; 2024 [Your Name]</p>
     </footer>
 
-    <script src="main.js"></script>
+    
 </body>
 </html>

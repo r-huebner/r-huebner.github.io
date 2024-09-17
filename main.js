@@ -102,11 +102,18 @@ function createHistogram(chartContainer) {
                     
                 }
             },
+            elements: {
+                bar: {
+                    borderWidth: 2,
+                    barThickness: 50, // Set the width of the columns
+                }
+            },
             responsive: true,
             maintainAspectRatio: false
         }
     });
 }
+
 
 document.addEventListener('DOMContentLoaded', () => {
     // Select all sections
@@ -159,4 +166,25 @@ document.addEventListener('DOMContentLoaded', () => {
         // Create histogram for the chart container
         createHistogram(chartContainer);
     });
+
+
+    const navContent = document.querySelector('.contact-nav-content');
+        const navToggleButton = document.querySelector('.nav-icon-button');
+        const navLinks = document.querySelectorAll('.contact-nav-content a');
+
+        function toggleNav() {
+            navContent.classList.toggle('show-nav');
+        }
+
+        function hideNav() {
+            navContent.classList.remove('show-nav');
+        }
+
+        // Event listener for the toggle button
+        navToggleButton.addEventListener('click', toggleNav);
+
+        // Event listeners for each navigation link
+        navLinks.forEach(link => {
+            link.addEventListener('click', hideNav);
+        });
 });
