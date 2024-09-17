@@ -23,6 +23,8 @@ function createHistogram(chartContainer) {
     const dataValues = Object.values(labelCount);
     const dataLabels = Object.keys(labelCount);
 
+
+
     // Define different colors for each label using hex codes
     const labelColors = {
 'Web Application': '#a78b5c',
@@ -58,7 +60,7 @@ function createHistogram(chartContainer) {
                     display: false // Hide the legend
                 },
                 tooltip: {
-                    enabled: false // Disable tooltips
+                    enabled: true // Disable tooltips
                 }
             },
             scales: {
@@ -98,16 +100,11 @@ function createHistogram(chartContainer) {
                             family: 'Noto Sans',
                             size: 12
                         }
-                    }
-                    
+                    }  
                 }
             },
-            elements: {
-                bar: {
-                    borderWidth: 2,
-                    barThickness: 50, // Set the width of the columns
-                }
-            },
+            
+            maxBarThickness:55,
             responsive: true,
             maintainAspectRatio: false
         }
@@ -187,4 +184,5 @@ document.addEventListener('DOMContentLoaded', () => {
         navLinks.forEach(link => {
             link.addEventListener('click', hideNav);
         });
+
 });

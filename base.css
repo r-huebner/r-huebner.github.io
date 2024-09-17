@@ -80,10 +80,18 @@
 
 .title-text {
     color: #6E8569;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     margin-top: 30px;
     text-align: center;
     font-weight: 500;
+}
+
+.subtitle-text {
+    display: block;
+    text-align: center;
+    font-size: 18px; /* Slightly smaller than the title */
+    color: #A8C08F; /* Light green color, adjust as needed */
+    margin: 0; /* Remove default margin */
 }
 
 /* =======================
@@ -400,7 +408,7 @@ footer {
     align-items: center;
     justify-content: flex-end;
     margin-top: 10px;
-    padding-right: 30px;
+    padding-bottom: 10px;
     overflow: hidden; /* Prevent overflow */
 }
 
